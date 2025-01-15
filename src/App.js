@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ThemeProvider } from '@mui/material/styles';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import theme from './theme';
@@ -13,6 +13,12 @@ function ProtectedRoute({ children }) {
 }
 
 function App() {
+  useEffect(() => {
+    if (window.initAddedDCLightExercises) {
+      window.initAddedDCLightExercises();
+    }
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
