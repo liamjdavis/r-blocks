@@ -13,6 +13,7 @@
  */
 
 import React from 'react';
+import Logout from '../logout';
 
 //Style
 import './styles/base.css';
@@ -55,6 +56,7 @@ export default function Toolbar() {
                     <FiberNewIcon fontSize="large" sx={{ml: "-2px", mb: "-1px"}}/>
                 </button>
                  */}
+        <Logout />
       </div>
     </nav>
   );
