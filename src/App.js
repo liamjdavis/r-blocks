@@ -14,9 +14,11 @@ function ProtectedRoute({ children }) {
 
 function App() {
   useEffect(() => {
-    if (window.initAddedDCLightExercises) {
-      window.initAddedDCLightExercises();
-    }
+    setTimeout(() => {
+      if (window.initAddedDCLightExercises) {
+        window.initAddedDCLightExercises();
+      }
+    }, 0);
   }, []);
 
   return (
