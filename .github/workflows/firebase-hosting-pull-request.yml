@@ -16,6 +16,7 @@ jobs:
       - name: Install and Build
         env:
           CI: false
+          REACT_APP_FIREBASE_API_KEY: ${{ secrets.REACT_APP_FIREBASE_API_KEY }}
         run: npm install --legacy-peer-deps && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
